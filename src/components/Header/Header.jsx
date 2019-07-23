@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import CheckoutIcon from './components/CheckoutIcon';
-import AccountIcon from './components/AccountIcon';
+import CheckoutIcon from '../../svgs/CheckoutIcon';
+import AccountIcon from '../../svgs/AccountIcon';
 
 export class Header extends Component {
   constructor() {
@@ -17,8 +17,8 @@ export class Header extends Component {
             <span style={{ marginRight: '40px' }}>Men</span>
             <span>Women</span>
           </div>
-          <div className="logo">
-            <div>
+          <div className="logo-wrapper">
+            <div className="logo">
               <span className="oval-yellow" />
               <span className="oval-green" />
             </div>

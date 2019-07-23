@@ -1,0 +1,47 @@
+.product-detail-container
+  height: rem-calc(700px)
+  display: flex
+  flex-direction: row-reverse
+
+  // ProductImages
+  .product-images-container, .carousel, .carousel-slider
+    height: fit-content
+
+  .product-images-container
+    .carousel-slider, .selected-img-container
+      width: rem-calc(890px)
+      height: rem-calc(535px)
+        
+      .selected-img
+        max-width: rem-calc(890px)
+        max-height: rem-calc(535px)
+        width: auto
+        height: auto
+      
+    .carousel-bottom, .carousel-preview, .img-preview, .selected-img-container
+      display: flex
+      align-items: center
+      justify-content: center
+      .carousel-button
+        border: none
+
+      .img-preview
+        width: rem-calc(80px)
+        height: rem-calc(60px)
+        margin-right: rem-calc(5px)
+        img
+          max-width: rem-calc(80px)
+          max-height: rem-calc(60px)
+          width: auto
+          height: auto
+        &:last-child
+          margin-right: 0
+
+
+  // Details
+  .details-container
+    width: rem-calc(398px)
+    height: fit-content
+    display: flex
+    justify-content: space-between
+    
