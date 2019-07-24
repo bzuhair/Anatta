@@ -28,7 +28,6 @@ class ProductDetail extends Component {
 
   render() {
     const { selectedProduct, selectedImg, images } = this.state;
-    console.log('se', selectedProduct);
     return selectedProduct
       ? (
         <div className="product-detail-container">
