@@ -6,25 +6,21 @@ import BackIcon from '../../../svgs/BackIcon';
 import NextIcon from '../../../svgs/NextIcon';
 
 
-const ProductImages = ({ selectedImg, images }) => {
-  // let img = '';
+const ProductImages = ({ selectedImg, images, selectImgHandler }) => {
   let slides = [];
   let previewImgs = [];
-  // if (selectedImg) img = selectedImg.url;
   if (images.length) {
-    slides = images.map((image, idx) => {
-      previewImgs.push(<div className="img-preview"><img alt="" src={idx === 1 ? 'https://s3-us-west-1.amazonaws.com/synapse-bl-chatbot/assets/bof-a-logo.png' : 'https://s3-us-west-1.amazonaws.com/synapse-bl-chatbot/assets/chase-logo.png'} /></div>);
+    slides = images.map((image) => {
+      previewImgs.push(<div key={`preview-${image.id}${image.productId}`} className="img-preview"><img alt="" className={image.id === selectedImg.data.id ? 'img-selected' : ''} src={image.url} /></div>);
       return (
-        <Slide className="carousel-slide" index={image.id}>
-          {/* <Image src={image.url} /> */}
+        <Slide key={`slide-${image.id}${image.productId}`} className="carousel-slide" index={image.id}>
           <div className='selected-img-container'>
-            <Image className="selected-img" src={idx === 1 ? 'https://s3-us-west-1.amazonaws.com/synapse-bl-chatbot/assets/bof-a-logo.png' : 'https://s3-us-west-1.amazonaws.com/synapse-bl-chatbot/assets/chase-logo.png'} />
+            <Image className="selected-img" src={image.url} />
           </div>
         </Slide>
       );
     })
   }
-  console.log(images);
   return (
     <div className="product-images-container">
       <CarouselProvider
@@ -36,11 +32,11 @@ const ProductImages = ({ selectedImg, images }) => {
           {slides}
         </Slider>
         <div className="carousel-bottom">
-          <ButtonBack className="carousel-button"><BackIcon /></ButtonBack>
+          <ButtonBack className="carousel-button" onClick={() => selectImgHandler('back')}><BackIcon /></ButtonBack>
           <div className="carousel-preview">
             {previewImgs}
           </div>
-          <ButtonNext className="carousel-button"><NextIcon /></ButtonNext>
+          <ButtonNext className="carousel-button" onClick={() => selectImgHandler('next')}><NextIcon /></ButtonNext>
         </div>
       </CarouselProvider>
     </div>
