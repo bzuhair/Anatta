@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/anatta/static/css/main.e4121a69.chunk.css",
+    "main.js": "/anatta/static/js/main.45d771b1.chunk.js",
+    "main.js.map": "/anatta/static/js/main.45d771b1.chunk.js.map",
+    "runtime~main.js": "/anatta/static/js/runtime~main.442fbcf2.js",
+    "runtime~main.js.map": "/anatta/static/js/runtime~main.442fbcf2.js.map",
+    "static/css/2.1fd2b905.chunk.css": "/anatta/static/css/2.1fd2b905.chunk.css",
+    "static/js/2.8ca5f64b.chunk.js": "/anatta/static/js/2.8ca5f64b.chunk.js",
+    "static/js/2.8ca5f64b.chunk.js.map": "/anatta/static/js/2.8ca5f64b.chunk.js.map",
+    "index.html": "/anatta/index.html",
+    "precache-manifest.08bb74aadc6835ac03bbf73a7a5c31ac.js": "/anatta/precache-manifest.08bb74aadc6835ac03bbf73a7a5c31ac.js",
+    "service-worker.js": "/anatta/service-worker.js",
+    "static/css/2.1fd2b905.chunk.css.map": "/anatta/static/css/2.1fd2b905.chunk.css.map",
+    "static/css/main.e4121a69.chunk.css.map": "/anatta/static/css/main.e4121a69.chunk.css.map"
+  }
+}
