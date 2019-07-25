@@ -4,8 +4,8 @@ import Plane from '../../../svgs/Plane';
 import ShippingBox from '../../../svgs/ShippingBox';
 
 
-const PaymentShipping = () => (
-  <div className="payment-shipping-container">
+const FeaturesStrip = () => (
+  <div className="features-strip-container">
     <div><Plane /><span>Secure Payment</span></div>
     <div className="vertical-divider" />
     <div><Plane /><span>Express Shipping</span></div>
@@ -14,4 +14,4 @@ const PaymentShipping = () => (
   </div>
 );
 
-export default PaymentShipping;
+export default FeaturesStrip;

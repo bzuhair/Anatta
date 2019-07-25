@@ -1,12 +1,12 @@
 import React from 'react';
 
-import PaymentShipping from './components/PaymentShipping';
+import FeaturesStrip from './components/FeaturesStrip';
 import PageLinks from './components/PageLinks';
 
 
 const Footer = () => (
   <div className="footer-container">
-    <PaymentShipping />
+    <FeaturesStrip />
     <PageLinks />
     <div className="divider-2" />
     <div className="copyright">Copyright © 2019 CARIUMA. All Rights Reserved. Terms of Use | Privacy Policy</div>
