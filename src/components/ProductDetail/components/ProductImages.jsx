@@ -10,23 +10,24 @@ const ProductImages = ({ selectedImg, images, selectImgHandler }) => {
   let slides = [];
   let previewImgs = [];
   if (images.length) {
-    slides = images.map((image) => {
-      previewImgs.push(<div key={`preview-${image.id}${image.productId}`} className="img-preview"><img alt="" className={image.id === selectedImg.data.id ? 'img-selected' : ''} src={image.url} /></div>);
+    slides = images.map((image, idx) => {
+      previewImgs.push(<div key={`preview-${image.id}${image.productId}`} className="img-preview"><img alt="" className={selectedImg.id === idx ? 'img-selected' : ''} src={image.url} /></div>);
       return (
-        <Slide key={`slide-${image.id}${image.productId}`} className="carousel-slide" index={image.id}>
+        <Slide key={`slide-${image.id}${image.productId}`} className="carousel-slide" index={idx}>
           <div className='selected-img-container'>
             <Image className="selected-img" src={image.url} />
           </div>
         </Slide>
       );
-    })
+    });
   }
   return (
     <div className="product-images-container">
       <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={125}
-        totalSlides={3}
+        naturalSlideWidth={890}
+        naturalSlideHeight={600}
+        totalSlides={slides.length}
+        currentSlide={selectedImg.id}
       >
         <Slider className="carousel-slider">
           {slides}

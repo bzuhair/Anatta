@@ -5,7 +5,7 @@ const SelectColor = ({ selectedColor, colors }) => (
     <span>SELECT COLOR</span>
     <div className="colors">
       {colors.map((color, idx) => (
-        <div key={`${color}-idx`} className={`color-${color === selectedColor ? 'selected' : ''}`}>
+        <div key={`${color}-${idx}`} className={`color-${color === selectedColor ? 'selected' : ''}`}>
           <div className="color center-content-absolute" style={{ backgroundColor: color }} />
         </div>
       ))}

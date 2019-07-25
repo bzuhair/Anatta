@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './Header/Header';
 import ProductDetail from './ProductDetail/ProductDetail';
+import RecommendedProducts from './RecommendedProducts/RecommendedProducts';
 import Footer from './Footer/Footer';
 
 import { getProducts, getProductImage } from '../services/productService';
@@ -11,7 +12,10 @@ class Main extends Component {
     super();
     this.state = {
       products: [],
-      selectedProduct: null
+      recommendedProducts: [],
+      images: [],
+      selectedProduct: null,
+      selectedImg: null
     };
   }
 
@@ -27,17 +31,63 @@ class Main extends Component {
         .catch((err) => console.log(err));
     });
     Promise.all(products).then((values) => {
-      this.setState({ products: values, selectedProduct: values[0] });
+      this.setState({
+        products: values,
+        recommendedProducts: values.slice(1, values.length),
+        images: values[0].imgURLs,
+        selectedProduct: values[0],
+        selectedImg: { id: 0, data: values[0].imgURLs[0] }
+      });
     });
   }
 
+  updateSelectedProduct = (selectedProduct) => {
+    const { products } = this.state;
+    const recommendedProducts = products.filter((product) => product.id !== selectedProduct.id);
+
+    this.setState({
+      recommendedProducts,
+      images: selectedProduct.imgURLs,
+      selectedProduct,
+      selectedImg: { id: 0, data: selectedProduct.imgURLs[0] }
+    });
+  }
+
+  selectImgHandler = (direction) => {
+    const { selectedProduct, selectedImg } = this.state;
+    let id = selectedImg.id;
+    if (direction === 'next') {
+      id += 1;
+      if (selectedImg.id < selectedProduct.imgURLs.length) this.setState({ selectedImg: { id, data: selectedProduct.imgURLs[id] } })
+    }
+    if (direction === 'back') {
+      id -= 1;
+      if (selectedImg.id !== 0) this.setState({ selectedImg: { id, data: selectedProduct.imgURLs[id] } })
+    }
+  }
+
   render() {
-    const { products, selectedProduct } = this.state;
+    const { images, selectedProduct, selectedImg, recommendedProducts } = this.state;
     return (
       <div id="main">
         <Header />
         <div className="divider" />
-        <ProductDetail products={products} selectedProduct={selectedProduct} />
+        {selectedProduct
+          ? [
+            <ProductDetail
+              key="product-detail"
+              images={images}
+              selectedProduct={selectedProduct}
+              selectedImg={selectedImg}
+              selectImgHandler={this.selectImgHandler}
+            />,
+            <RecommendedProducts
+              key="recommended-products"
+              recommendedProducts={recommendedProducts}
+              updateSelectedProduct={this.updateSelectedProduct}
+            />
+          ]
+          : null}
         <Footer />
       </div>
     );

@@ -8,7 +8,7 @@ const SelectSize = ({ selectedSize, sizes, unavailableSizes }) => (
     </div>
     <div className="sizes">
       {sizes.map((size, idx) => (
-        <div key={`${size}-idx`} className="size" style={{ border: size === selectedSize ? 'solid 4px #7dc242' : 'solid 1px #4a4a4a', backgroundColor: unavailableSizes.indexOf(size) === -1 ? '#ffffff' : '#f1f1f1' }}>
+        <div key={`${size}-${idx}`} className="size" style={{ border: size === selectedSize ? 'solid 4px #7dc242' : 'solid 1px #4a4a4a', backgroundColor: unavailableSizes.indexOf(size) === -1 ? '#ffffff' : '#f1f1f1' }}>
           {size}
         </div>
       ))}
