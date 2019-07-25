@@ -2,7 +2,7 @@
   "name": "ecommerce-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bzuhair.github.io/anatta",
+  "homepage": "https://bzuhair.github.io/Anatta",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
