@@ -6,8 +6,8 @@ import ShippingBox from '../../../svgs/ShippingBox';
 
 const FeaturesStrip = () => (
   <div className="features-strip-container">
-    <div><Plane /><span>Secure Payment</span></div>
-    <div className="vertical-divider" />
+    <div className="payment"><Plane /><span>Secure Payment</span></div>
+    <div className="vertical-divider one" />
     <div><Plane /><span>Express Shipping</span></div>
     <div className="vertical-divider" />
     <div><ShippingBox /><span>Free Returns</span></div>
