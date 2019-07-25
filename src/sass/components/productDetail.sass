@@ -2,27 +2,33 @@
   height: rem-calc(700px)
   display: flex
   flex-direction: row-reverse
+  justify-content: space-between
+  padding: 0 rem-calc(50px)
 
   // ProductImages
-  .product-images-container, .carousel, .carousel-slider
+  .product-images-container
     height: fit-content
+    width: 61.8%
+  
+  .carousel
+    width: 100%
 
   .product-images-container
+    display: flex
+    justify-content: flex-end
+    margin-top: rem-calc(60px)
+    margin-left: rem-calc(50px)
     .carousel-slider, .selected-img-container
-      width: rem-calc(890px)
-      height: rem-calc(535px)
-        
+      width: 100%
       .selected-img
-        max-width: rem-calc(890px)
-        max-height: rem-calc(535px)
-        width: auto
-        height: auto
+        max-height: 100%
       
     .carousel-bottom, .carousel-preview, .img-preview, .selected-img-container
       display: flex
       align-items: center
       justify-content: center
       .carousel-button
+        background-color: transparent
         border: none
 
       .img-preview
@@ -43,7 +49,28 @@
 
   // Details
   .details-container
-    width: rem-calc(398px)
+    width: 27.6%
+    max-width: rem-calc(398px)
+  .details-gender
+    display: flex
+    align-items: center
+    margin-top: rem-calc(30px)
+    font-family: GothamHTF
+    font-size: 10px
+    font-weight: normal
+    font-style: normal
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: normal
+    color: #4a4a4a
+    svg
+      width: 0.25rem
+      height: 0.5rem
+      margin-right: rem-calc(7px)
+    
+
+  .details-header
+    width: 100%
     height: fit-content
     display: flex
     justify-content: space-between
@@ -74,9 +101,9 @@
 
 
   .details-body
-    width: rem-calc(400)
-    height: rem-calc(352px)
+    width: 100%
     border: solid 1px #c8c8c8
+    box-sizing: border-box
     border-bottom: none
 
     .section-1
@@ -116,7 +143,7 @@
         color: #4a4a4a
       .colors
         display: flex
-        justify-content: space-between
+        flex-wrap: wrap
         margin-top: rem-calc(13px)
       .color-, .color-selected
         border-radius: 50%
@@ -133,7 +160,7 @@
         position: absolute
 
     .select-size
-      margin: 0 rem-calc(13px) rem-calc(35px)
+      margin: 0 rem-calc(13px)
       .header
         display: flex
         justify-content: space-between
@@ -160,31 +187,63 @@
         align-items: center
         justify-content: center
 
-    .add-bag
-      width: rem-calc(400px)
-      height: rem-calc(60px)
-      background-color: $primary-green
-      font-family: GothamHTF
-      font-size: 1rem
-      font-weight: bold
-      font-style: normal
-      font-stretch: normal
-      line-height: normal
-      letter-spacing: 2px
-      text-align: center
-      color: #ffffff
-      cursor: pointer
-      border: none
+    .filler
+      height: rem-calc(35px)
 
-    .world-shipping
-      font-family: GothamHTF
-      font-size: rem-calc(12px)
-      font-weight: normal
-      font-style: normal
-      font-stretch: normal
-      line-height: normal
-      letter-spacing: normal
-      text-align: center
-      color: #4a4a4a
-      margin-top: rem-calc(20px)
+  .add-bag, .world-shipping
+    width: 100%
+    height: rem-calc(60px)
+    background-color: $primary-green
+    font-family: GothamHTF
+    font-size: 1rem
+    font-weight: bold
+    font-style: normal
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: 2px
+    text-align: center
+    color: #ffffff
+    cursor: pointer
+    border: none
+
+  .world-shipping
+    height: fit-content
+    background-color: transparent
+    font-size: rem-calc(12px)
+    font-weight: normal
+    letter-spacing: normal
+    color: #4a4a4a
+    margin-top: rem-calc(20px)
       
+
+
+@media screen and (max-width: 980px)
+  .product-detail-container
+    flex-direction: column
+    align-items: center
+    height: fit-content
+    .product-images-container
+      width: 100%
+      margin: rem-calc(18px) 0 rem-calc(20px)
+    .details-container
+      min-width: rem-calc(333px)
+      max-width: rem-calc(440px)
+      width: auto
+      .details-gender
+        display: none
+      .details-header
+        margin-top: 0
+        margin-bottom: rem-calc(20px)
+      .select-color
+        margin: rem-calc(25px) rem-calc(13px) rem-calc(20px)
+        .colors
+          margin-top: rem-calc(2px)
+        .color-
+          margin: rem-calc(10px) 1rem rem-calc(5px) 0
+        .color-selected
+          margin: rem-calc(6px) 12px rem-calc(1px) 0
+      .select-size
+        .size
+          margin: rem-calc(4.5px) 14px rem-calc(4.5px) 0
+        .filler
+          height: rem-calc(21.5px)

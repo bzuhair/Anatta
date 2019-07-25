@@ -13,6 +13,7 @@ const SelectSize = ({ selectedSize, sizes, unavailableSizes }) => (
         </div>
       ))}
     </div>
+    <div className="filler" />
   </div>
 );
 

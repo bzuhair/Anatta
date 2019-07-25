@@ -6,12 +6,20 @@ import BackIcon from '../../svgs/BackIcon';
 import NextIcon from '../../svgs/NextIcon';
 
 const RecommendedProducts = ({ recommendedProducts, updateSelectedProduct }) => {
-  const slides = recommendedProducts.map((product, idx) => (
+  const carouselSlides = recommendedProducts.map((product, idx) => (
     <Slide key={`slide-${product.id}`} className="carousel-slide" index={idx} onClick={() => updateSelectedProduct(product)}>
       <Image className="selected-img" src={product.imgURLs[0].url} />
       <div className="name">{product.name}</div>
       <div className="price">${product.price}</div>
     </Slide>
+  ));
+
+  const mobileSlides = recommendedProducts.map((product, idx) => (
+    <div key={`slide-${product.id}`} className="mobile-slide" index={idx} onClick={() => updateSelectedProduct(product)}>
+      <img alt="" className="selected-img" src={product.imgURLs[0].url} />
+      <div className="name">{product.name}</div>
+      <div className="price">${product.price}</div>
+    </div>
   ));
 
   return (
@@ -22,16 +30,17 @@ const RecommendedProducts = ({ recommendedProducts, updateSelectedProduct }) => 
           <CarouselProvider
             naturalSlideWidth={329}
             naturalSlideHeight={421.5}
-            totalSlides={slides.length}
+            totalSlides={carouselSlides.length}
             visibleSlides={4}
           >
             <ButtonBack className="carousel-button back"><BackIcon /></ButtonBack>
             <Slider className="carousel-slider">
-              {slides}
+              {carouselSlides}
             </Slider>
             <ButtonNext className="carousel-button next"><NextIcon /></ButtonNext>
           </CarouselProvider>
         }
+        {mobileSlides}
       </div>
     </div>
   );
