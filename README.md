@@ -86,19 +86,23 @@ I made this a **PureComponent** in order to have performance improvements for th
 Has 2 functional child components
 
 1. **<ProductImages />**
-   - displays the carousel 
-   - props used are ```selectedImg```, ```images```, and ```selectImgHandler```
+
+   displays the carousel 
+
+   props used are ```selectedImg```, ```images```, and ```selectImgHandler```
     
 2. **<Details />**
-    - displays sizes, colors and adding product to bag
-    - props used is ```selectedProduct```
-
+  
+   displays sizes, colors and adding product to bag
+   
+    props used is ```selectedProduct```
 
 ### <RecommendedProducts /> 
 
   props:
   
  - ```recommendedProducts``` - used to display recommended products inside carousel
+
  - ```updateSelectedProducts``` - used when user clicks on a product in the recommendedProduct's carousel
 
 
