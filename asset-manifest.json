@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Anatta/static/css/main.fa997f46.chunk.css",
+    "main.css": "/Anatta/static/css/main.12119f26.chunk.css",
     "main.js": "/Anatta/static/js/main.decd670f.chunk.js",
     "main.js.map": "/Anatta/static/js/main.decd670f.chunk.js.map",
     "runtime~main.js": "/Anatta/static/js/runtime~main.587481f9.js",
@@ -9,9 +9,9 @@
     "static/js/2.8ca5f64b.chunk.js": "/Anatta/static/js/2.8ca5f64b.chunk.js",
     "static/js/2.8ca5f64b.chunk.js.map": "/Anatta/static/js/2.8ca5f64b.chunk.js.map",
     "index.html": "/Anatta/index.html",
-    "precache-manifest.e381b359c432928f7b5355b0f15229ca.js": "/Anatta/precache-manifest.e381b359c432928f7b5355b0f15229ca.js",
+    "precache-manifest.fb56e4215d928d58f7fe12b8f3677c0b.js": "/Anatta/precache-manifest.fb56e4215d928d58f7fe12b8f3677c0b.js",
     "service-worker.js": "/Anatta/service-worker.js",
     "static/css/2.1fd2b905.chunk.css.map": "/Anatta/static/css/2.1fd2b905.chunk.css.map",
-    "static/css/main.fa997f46.chunk.css.map": "/Anatta/static/css/main.fa997f46.chunk.css.map"
+    "static/css/main.12119f26.chunk.css.map": "/Anatta/static/css/main.12119f26.chunk.css.map"
   }
 }
