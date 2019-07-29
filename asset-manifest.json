@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Anatta/static/css/main.273fea74.chunk.css",
-    "main.js": "/Anatta/static/js/main.be2d8c38.chunk.js",
-    "main.js.map": "/Anatta/static/js/main.be2d8c38.chunk.js.map",
+    "main.css": "/Anatta/static/css/main.fa997f46.chunk.css",
+    "main.js": "/Anatta/static/js/main.decd670f.chunk.js",
+    "main.js.map": "/Anatta/static/js/main.decd670f.chunk.js.map",
     "runtime~main.js": "/Anatta/static/js/runtime~main.587481f9.js",
     "runtime~main.js.map": "/Anatta/static/js/runtime~main.587481f9.js.map",
     "static/css/2.1fd2b905.chunk.css": "/Anatta/static/css/2.1fd2b905.chunk.css",
     "static/js/2.8ca5f64b.chunk.js": "/Anatta/static/js/2.8ca5f64b.chunk.js",
     "static/js/2.8ca5f64b.chunk.js.map": "/Anatta/static/js/2.8ca5f64b.chunk.js.map",
     "index.html": "/Anatta/index.html",
-    "precache-manifest.447634f2c80487eba4a4af49945f0bee.js": "/Anatta/precache-manifest.447634f2c80487eba4a4af49945f0bee.js",
+    "precache-manifest.e381b359c432928f7b5355b0f15229ca.js": "/Anatta/precache-manifest.e381b359c432928f7b5355b0f15229ca.js",
     "service-worker.js": "/Anatta/service-worker.js",
     "static/css/2.1fd2b905.chunk.css.map": "/Anatta/static/css/2.1fd2b905.chunk.css.map",
-    "static/css/main.273fea74.chunk.css.map": "/Anatta/static/css/main.273fea74.chunk.css.map"
+    "static/css/main.fa997f46.chunk.css.map": "/Anatta/static/css/main.fa997f46.chunk.css.map"
   }
 }
