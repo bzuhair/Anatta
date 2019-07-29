@@ -25,7 +25,7 @@ I structured the project to have one parent component that holds the state ```<M
  
 State is held in ```<Main />``` in order to make the code more readable and maintainable. If this project were to get more complex (display more pages, use more components etc.) I would add Redux to manage the state but for now I felt like it wasn't necessary.
 
-## <Main />
+### Main
  
 contains state
 
@@ -66,14 +66,14 @@ There are 3 methods defined which are:
      - Set's state of ```selectedImg```
 
 
-## <Header />
+### Header
 
 displays header
 
 Since this is a presentational-only component I decided to make it a functional component.
 
 
-## <ProductDetail />
+### ProductDetail
 
 props:  
 - ```images``` - all images the user from a single products
@@ -97,7 +97,7 @@ Has 2 functional child components
    
     props used is ```selectedProduct```
 
-## <RecommendedProducts /> 
+### RecommendedProducts
 
   props:
   
@@ -106,7 +106,7 @@ Has 2 functional child components
  - ```updateSelectedProducts``` - used when user clicks on a product in the recommendedProduct's carousel
 
 
-## <Footer />
+### Footer
 
 displays footer (has features strip and page links)
 
