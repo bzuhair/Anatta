@@ -28,8 +28,8 @@ const RecommendedProducts = ({ recommendedProducts, updateSelectedProduct }) => 
       <div className="recommended-products">
         {
           <CarouselProvider
-            naturalSlideWidth={329}
-            naturalSlideHeight={421.5}
+            naturalSlideWidth={330}
+            naturalSlideHeight={425}
             totalSlides={carouselSlides.length}
             visibleSlides={4}
           >

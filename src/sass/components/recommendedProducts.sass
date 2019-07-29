@@ -19,8 +19,8 @@
     margin: rem-calc(25.7px) 0
 
     img
-      width: rem-calc(329px)
-      height: rem-calc(377px)
+      width: 100%
+      height: 87%
 
     .mobile-slide
       display: none
@@ -81,3 +81,19 @@
       .mobile-slide
         display: block
         margin-bottom: rem-calc(18px)
+        width: rem-calc(329px)
+        height: rem-calc(377px)
+        img
+          width: 100%
+          height: rem-calc(347px)
+
+
+@media screen and (max-width: 680px)
+  .recommended-products-container
+    .recommended-products
+      .mobile-slide
+        height: rem-calc(230px)
+        width: rem-calc(175px)
+        img
+          width: 100%
+          height: rem-calc(200px)

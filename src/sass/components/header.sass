@@ -31,13 +31,14 @@
       color: #000000
       span
         cursor: pointer
+    .header-left
+      svg
+        display: none
 
     .logo-wrapper
       width: rem-calc(75px)
       height: rem-calc(45px)
       position: relative
-      margin-left: 34.8%
-      margin-right: 32.5%
       .logo
         width: rem-calc(75px)
         height: rem-calc(45px)
@@ -62,3 +63,14 @@
       display: flex
       width: rem-calc(72px)
       justify-content: space-between
+
+    
+    
+@media screen and (max-width: 400px)
+  .header-container
+    .nav-bar
+      .header-left, .header-right
+        span
+          display: none
+        svg
+          display: inline-block

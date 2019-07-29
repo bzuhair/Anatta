@@ -24,8 +24,5 @@ export default {
   'POP UP STORES': [
     { name: 'Find near you', link: null },
     { name: 'Register', link: null }
-  ],
-  NEWSLETTER: [
-    { enterEmail: true }
   ]
 };
