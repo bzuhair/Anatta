@@ -18,6 +18,9 @@ Run the app in dev mode
 npm start
 ```
 
+Deployed at 
+
+``` https://bzuhair.github.io/Anatta/```
 
 ## Choices/Assumptions
 
