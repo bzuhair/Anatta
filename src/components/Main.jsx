@@ -11,6 +11,7 @@ class Main extends Component {
   constructor() {
     super();
     this.state = {
+      loading: true,
       products: [],
       recommendedProducts: [],
       images: [],
@@ -32,6 +33,7 @@ class Main extends Component {
     });
     Promise.all(products).then((values) => {
       this.setState({
+        loading: false,
         products: values,
         recommendedProducts: values.slice(1, values.length),
         images: values[0].imgURLs,
@@ -67,30 +69,27 @@ class Main extends Component {
   }
 
   render() {
-    const { images, selectedProduct, selectedImg, recommendedProducts } = this.state;
-    return (
-      <div id="main">
-        <Header />
-        <div className="divider" />
-        {selectedProduct
-          ? [
-            <ProductDetail
-              key="product-detail"
-              images={images}
-              selectedProduct={selectedProduct}
-              selectedImg={selectedImg}
-              selectImgHandler={this.selectImgHandler}
-            />,
-            <RecommendedProducts
-              key="recommended-products"
-              recommendedProducts={recommendedProducts}
-              updateSelectedProduct={this.updateSelectedProduct}
-            />
-          ]
-          : null}
-        <Footer />
-      </div>
-    );
+    const { loading, images, selectedProduct, selectedImg, recommendedProducts } = this.state;
+    return loading
+      ? <div className="lds-dual-ring center-content" />
+      : (
+        <div id="main">
+          <Header />
+          <div className="divider" />
+          <ProductDetail
+            images={images}
+            selectedProduct={selectedProduct}
+            selectedImg={selectedImg}
+            selectImgHandler={this.selectImgHandler}
+          />
+          <RecommendedProducts
+            recommendedProducts={recommendedProducts}
+            updateSelectedProduct={this.updateSelectedProduct}
+          />
+
+          <Footer />
+        </div>
+      )
   }
 }
 
